@@ -1,0 +1,169 @@
+body {
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+h1,h2,h3 {
+	margin: 0;
+}
+
+.header {
+	width: 100%;
+	padding: 15px 0px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 300;
+	color: gray;
+}
+
+.header_logo {
+	color: inherit;
+	text-decoration: none;
+
+}
+
+.hero {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	max-width: 1230px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+.hero_container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+	grid-gap: 20px;
+}
+
+.hero_about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hero_title {
+	margin-bottom: 20px;
+	font-size: 48px;
+	line-height: 1.1;
+}
+
+.hero_sublitle {
+	font-size: 32px;
+	font-weight: 400;
+}
+
+.hero_links {
+	display: flex;
+}
+
+.hero_link {
+	margin-right: 20px;
+	font-size: 40px;
+	color: gray;
+
+	transition: color 0.4s;
+}
+
+.hero_link:hover {
+	color: black;
+}
+
+.hero_box {
+	max-width: 500px;
+	justify-content: center;
+	overflow: hidden;
+
+	border: 5px;
+	box-shadow: 2px 5px 10px;
+	/*background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);*/
+	/*background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);*/
+	background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+	animation: img-animate 8s infinite alternate;
+}
+
+.hero_box_image {
+	animation: img-bg 8s infinite alternate;
+}
+
+@media screen and (max-width: 978px) {
+	.hero {
+		padding-top: 30px;
+	}
+	.hero_container {
+		grid-row-gap: 20px;
+	}
+	.hero_title {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.hero_subtitle {
+		font-size: 22px;
+		font-weight: 400;
+	}
+	.hero_description {
+		font-size: 14px;
+	}
+	.hero_about {
+		text-align: center;
+	}
+	.hero_links {
+		justify-content: center;
+	}
+	.hero_box {
+		max-width: 350px;
+	}
+
+}
+
+@keyframes img-animate {
+	0% {
+		border-radius: 20% 80% 47% 53% / 54% 28% 72% 46%; 
+	}
+	30% {
+		border-radius: 39% 61% 41% 59% / 74% 28% 72% 26%;
+	}
+	50% {
+		border-radius: 27% 73% 67% 33% / 55% 38% 62% 45%;
+	}
+	90% {
+		border-radius: 73% 27% 62% 38% / 48% 52% 48% 52%;
+	}
+	100% {
+		border-radius: 68% 32% 18% 82% / 80% 75% 25% 20%;
+	}
+}
+
+@keyframes img-bg {
+	from {
+		backdrop-filter: hue-rotate(0);
+	}
+	to {
+		backdrop-filter; hue-rotate(90deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
